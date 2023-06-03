@@ -1,10 +1,10 @@
 <template>
   <form @submit.prevent="submitForm">
-    <div class="form-control">
+    <div class="form-control1">
       <label for="email">Your E-Mail</label>
       <input id="email" v-model.trim="email" type="email" />
     </div>
-    <div class="form-control">
+    <div class="form-control1">
       <label for="message">Message</label>
       <textarea id="message" v-model.trim="message" rows="5"></textarea>
     </div>
@@ -56,7 +56,7 @@ form {
   padding: 1rem;
 }
 
-.form-control {
+.form-control1 {
   margin: 0.5rem 0;
 }
 

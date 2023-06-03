@@ -2,9 +2,9 @@
   <button v-if="!link" :class="mode">
     <slot></slot>
   </button>
-  <router-link v-else :to="to" :class="mode">
+  <nuxt-link v-else :to="to" :class="mode">
     <slot></slot>
-  </router-link>
+  </nuxt-link>
 </template>
 
 <script>
@@ -13,19 +13,19 @@ export default {
     mode: {
       type: String,
       required: false,
-      default: null
+      default: null,
     },
     link: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
     to: {
       type: String,
       required: false,
-      default: '/'
-    }
-  }
+      default: '/',
+    },
+  },
 }
 </script>
 

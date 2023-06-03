@@ -1,8 +1,8 @@
 <template>
-  <teleport to="body">
-    <div v-if="show" @click="tryClose" class="backdrop"></div>
+  <div>
+    <div v-if="show" class="backdrop" @click="tryClose"></div>
     <transition name="dialog">
-      <dialog open v-if="show">
+      <dialog v-if="show" open>
         <header>
           <slot name="header">
             <h2>{{ title }}</h2>
@@ -18,7 +18,7 @@
         </menu>
       </dialog>
     </transition>
-  </teleport>
+  </div>
 </template>
 
 <script>
@@ -41,13 +41,15 @@ export default {
   emits: ['close'],
   methods: {
     tryClose() {
+      console.log('click')
+
       if (this.fixed) {
-        return;
+        return
       }
-      this.$emit('close');
+      this.$emit('close')
     },
   },
-};
+}
 </script>
 
 <style scoped>

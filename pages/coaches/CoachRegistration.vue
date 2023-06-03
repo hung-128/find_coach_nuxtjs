@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CoachForm from '../../components/coaches/CoachForm.vue';
+import CoachForm from '../../components/coaches/CoachForm.vue'
 
 export default {
   components: {
@@ -16,9 +16,9 @@ export default {
   },
   methods: {
     saveData(data) {
-      this.$store.dispatch('coaches/registerCoach', data);
-      this.$router.replace('/coaches');
-    }
-  }
-};
+      this.$store.dispatch('coaches/registerCoach', data)
+      this.$router.replace('/coaches')
+    },
+  },
+}
 </script>

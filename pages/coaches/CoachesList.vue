@@ -49,6 +49,7 @@ export default {
     CoachItem,
     CoachFilter,
   },
+  layout: 'my-layout',
   data() {
     return {
       isLoading: false,
@@ -104,6 +105,9 @@ export default {
     handleError() {
       this.error = null
     },
+  },
+  beforeMount() {
+    console.log('12312')
   },
 }
 </script>
